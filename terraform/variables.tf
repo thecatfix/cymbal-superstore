@@ -14,7 +14,7 @@
 
 variable "project_id" {
   type        = string
-  description = "cloud-storage-392413"
+  description = "our Google Cloud Project ID"
 }
 
 variable "region" {
