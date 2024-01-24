@@ -128,19 +128,8 @@ When successful, you will see outputs like this — but with different values fo
 
 ![](assets/tf-results.png)
 
-12. Update your frontend to talk to the backend `inventory_cr_endpoint` in your output. To do this, copy the value of your `inventory_cr_endpoint`, open `frontend/.env.production`, and replace the value of `REACT_APP_INVENTORY_URL`. 
 
-13. Re-run `terraform apply`. This should only take a minute, as it will redeploy your frontend React app to Cloud Storage using the updated backend URL. 
 
-```
-terraform apply
-```
-
-14. Open your `frontend_ip` in a browser. You should see the Cymbal Superstore frontend. 
-
-![](assets/frontend-screenshot.png)
-
-15. Click on **New Arrivals.** You should see a mocked list of gray product rectangles. This is expected; the Duet AI demo steps cover the backend implementation of serving this list of new products. 
 
 ![](assets/new-arrivals-mock.png)
 
