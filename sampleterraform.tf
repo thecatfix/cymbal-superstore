@@ -1,15 +1,7 @@
-resource "google_compute_instance" "default" {
-  name         = "my-instance"
-  machine_type = "n1-standard-1"
-  zone         = "us-central1-a"
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-10"
-    }
-  }
-
-  network_interface {
-    network = "default"
-  }
+resource "google_storage_bucket" "frontend" {
+  name     = local.frontend_bucket_name
+  location = var.region
+  project  = var.project_id
+  website {
+    main_page_suffix = "index.html"
 }
